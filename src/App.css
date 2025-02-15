@@ -1,0 +1,35 @@
+/* body{
+    background-color: black;
+} */
+ body{
+    height: 100vh;
+    background-color: #FAFAFA; /* Blanc doux */
+    color: #212529;  
+ }
+/* nav bar flex section */
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+/* .search >  input{
+    padding: 9px 9px 10px 40px;
+    width: 450px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+ }
+ .search{
+   flex-wrap: nowrap;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: black;
+ } */
+ .all{
+   
+    z-index: -8;
+    height: 550px;
+    background-color:linear-gradient(180deg, #FFFFFF, #F8F9FA); 
+ }
