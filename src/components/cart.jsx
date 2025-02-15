@@ -1,8 +1,20 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Cartcontexe } from "./cartprovider.jsx";
 
 export const Cart = () => {
+    const [update,setupdate]=useState(null);
     const { cart, setcart } = useContext(Cartcontexe);
+    const [quantity, setQuantity] = useState(0);
+    const handleSave = (id) => {
+      
+        setcart(
+            cart.map((elemt)=>  Number(elemt.id)===Number(id) ? {...elemt,quantite:quantity} : elemt
+            )
+        )
+        setupdate(false);
+      };
+ 
+   
 
     const removeprod = (id) => {
         setcart(cart.filter((item) => item.id !== id));
@@ -19,7 +31,6 @@ export const Cart = () => {
     return (
         <div className="bg-gradient-to-b from-blue-50 to-white w-4/5 mx-auto p-10 rounded-xl shadow-xl text-black mt-12">
             <h1 className="text-4xl font-extrabold text-center text-indigo-700 mb-8">Your Cart</h1>
-            
             {cart.length === 0 ? (
                 <p className="text-center text-gray-500 text-xl">Your cart is empty.</p>
             ) : (
@@ -32,15 +43,32 @@ export const Cart = () => {
                                 <div className="flex-shrink-0">
                                     <img src={item.image} alt={item.title} className="w-28 h-28 object-cover rounded-md border border-gray-300" />
                                 </div>
-
                                 {/* Product Details */}
-                                <div className="flex-1 ml-6">
-                                    <h2 className="font-semibold text-lg text-gray-800">{item.title}</h2>
-                                    <p className="text-sm text-gray-500">Price: <span className="font-semibold text-green-500">{item.prix} $</span></p>
-                                    <p className="text-sm text-gray-500">Quantity: <span className="font-semibold">{item.quantite}</span></p>
+                             
+                                    {
+                                        update===item.id ? (
+                                            <>
+                                            <div>
+                                                <input type="text" value={quantity} onChange={(e)=>setQuantity(Number(e.target.value))} />
+                                                <button  onClick={()=>handleSave(item.id)}>save</button>
+                                            </div>
+                                           
+                                            </>
+                                        ) :
+                                        <div className="flex-1 ml-6">
+                                        <h2 className="font-semibold text-lg text-gray-800">{item.title}</h2>
+                                        <p className="text-sm text-gray-500">Price: <span className="font-semibold text-green-500">{item.prix} $</span></p>
+                                        <div className="flex justify-stretch items-center ">
+                                        <p className="text-sm text-gray-500">Quantity: <span className="font-semibold">{item.quantite}</span></p>
+                                        
+                                        <button onClick={()=> setupdate(item.id
+                                        )} className="bg-green-600 p-2 px-3 rounded-sm text-slate-100 ">update</button>
+                                   
+                                    </div>
                                     <p className="text-lg font-semibold text-red-600">Total: <span className="text-gray-800">{item.prix * item.quantite} $</span></p>
                                 </div>
-
+                                 }
+ 
                                 {/* Remove Button */}
                                 <button
                                     onClick={() => removeprod(item.id)}
