@@ -1,5 +1,5 @@
     import product from '../data/data.js'
-    import rating from '../../public/images/ratings/rating-45.png'
+   
     import { useContext, useState } from 'react'
     import { Cartcontexe } from './cartprovider.jsx';
   

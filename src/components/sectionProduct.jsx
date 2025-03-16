@@ -25,7 +25,7 @@ import { useContext } from 'react';
         };
 
         return (
-            <div className="transition">
+            <div className="transition mb-14">
                 <h1 className="text-center mt-[200px] text-4xl font-extrabold text-gray-800">
                     Top Product Sale
                 </h1>
