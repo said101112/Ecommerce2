@@ -48,29 +48,28 @@ export function Hero() {
 
   return (
     <div className="relative all overflow-hidden">
-      {/* Background Design */}
+     
       <div className="h-[800px] w-[700px] bg-orange-300 absolute -top-96 rotate-45 flex rounded-3xl -z-20 right-0"></div>
 
-      {/* Hero Section */}
+      
       <div className="container mx-auto px-52 py-16 sm:py-24">
         <Slider {...settings}>
           {ImageLIST.map((element) => (
             <div key={element.id} className="grid grid-cols-2 items-center gap-8">
               <div className=" grid grid-cols-2 items-center ">
-              {/* Text Content */}
+              
               <div className="">
                 <h1 className="text-4xl sm:text-5xl font-bold">{element.title}</h1>
                 <p className="text-lg mt-4">{element.description}</p>
                 <button className="mt-6 cursor-pointer py-4 px-6 rounded-2xl text-white bg-red-500 ">
-             
                   Explore More
                 </button>
               </div>
-              {/* Image */}
+             
               <div className="flex justify-center">
                 <img
                   src={element.img}
-                  className="w-[400px] h-[380px] object-contain"
+                  className="w-[500px] h-[480px] object-contain"
                   alt={element.title}
                 />
               </div>

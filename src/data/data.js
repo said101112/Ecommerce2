@@ -10,7 +10,7 @@ const product=
     "marque": "LeatherStyle",
     "image": "https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg",
     "stock": 15,
-    "note": 4.5,
+    "note": 3,
     "prix": 120.99
   },
   {
@@ -20,7 +20,7 @@ const product=
     "marque": "LinenWear",
     "image": "https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg",
     "stock": 30,
-    "note": 4.2,
+    "note": 4,
     "prix": 45.50
   },
   {
@@ -30,7 +30,7 @@ const product=
     "marque": "DenimPro",
     "image": "https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg",
     "stock": 20,
-    "note": 4.6,
+    "note": 5,
     "prix": 59.99
   },
   {
@@ -40,7 +40,7 @@ const product=
     "marque": "WoolComfort",
     "image": "https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg",
     "stock": 25,
-    "note": 4.3,
+    "note": 4,
     "prix": 39.99
   },
   {

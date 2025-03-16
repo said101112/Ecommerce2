@@ -8,7 +8,7 @@ import { Kids } from './components/kids.jsx'
 import { Shop } from './components/shop.jsx'
 
 import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom'
-import { Login } from './components/login.jsx'
+
 import { CartProvider } from './components/cartprovider.jsx'
 import { Cart } from './components/cart.jsx'
 
@@ -26,7 +26,7 @@ const Nav_herite = () => {
 
 function App() {
   return (
-    // Englobe toute l'application avec CartProvider
+    
     <CartProvider> 
       <BrowserRouter>
         <Routes>
@@ -37,7 +37,6 @@ function App() {
             <Route path='/cart' element={<Cart />} />
             <Route path='/women' element={<Women />} />
             <Route path='/kids' element={<Kids />} />
-            <Route path='/login' element={<Login />} />
           </Route>
         </Routes>
       </BrowserRouter>
