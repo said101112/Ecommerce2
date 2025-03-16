@@ -45,7 +45,7 @@ export const Footer = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="p-2 w-full text-black rounded-l-md"
+                className="p-2 w-full text-black rounded-l-md outline-none hover:border-orange-400 border-4"
               />
               <button className="bg-red-500 px-4 py-2 rounded-r-md hover:bg-red-600">
                 Subscribe

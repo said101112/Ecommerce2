@@ -2,6 +2,7 @@
    
     import { useContext, useState } from 'react'
     import { Cartcontexe } from './cartprovider.jsx';
+import { Footer } from './Footer.jsx';
   
 
     export const Men = () => {
@@ -62,8 +63,9 @@
         };
 
         return (
-            <div className='flex '>
-            <div className='w-60  h-auto border-2'>
+            <>
+            <div className='flex mb-14'>
+            <div className='w-60  h-auto border-2 '>
         <h1 className='text-center pt-20 font-semibold text-3xl'>Categories </h1>
             </div>
             <div className='flex flex-col '>
@@ -127,6 +129,9 @@
                 </div>
               
                 </div> 
+               
             </div>
+            <Footer/>
+            </>
         );
     };
